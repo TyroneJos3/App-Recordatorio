@@ -1,10 +1,10 @@
 package com.mi_proyecto.App.domain.recordatorio;
 
-public class RecordatorioRepository {
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-    public Recordatorio save(Recordatorio recordatorio) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
-    }
-    
+@Repository
+public interface RecordatorioRepository extends JpaRepository<Recordatorio, Long> {
+    List<Recordatorio> findByUsuarioId(Long usuarioID);
 }

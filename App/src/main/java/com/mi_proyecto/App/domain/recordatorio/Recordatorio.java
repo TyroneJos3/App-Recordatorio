@@ -1,6 +1,11 @@
 package com.mi_proyecto.App.domain.recordatorio;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
 import com.mi_proyecto.App.domain.usuario.Usuario;
@@ -9,6 +14,10 @@ import com.mi_proyecto.App.domain.usuario.Usuario;
 
 @Entity
 @Table(name = "recordatorios")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Recordatorio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
